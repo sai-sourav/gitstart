@@ -33,8 +33,22 @@ console.log(headerTitle.textContent)
 
 //headerTitle.style.borderBottom = 'solid 3px #000';
 
-const additems = document.querySelector('h2');
-console.log(additems.innerText);
-additems.style.color = "green"
-//additems.style.fontWeight = 'bold';
-additems.innerHTML = '<b> Add items </b>';
+// const additems = document.querySelector('h2');
+// console.log(additems.innerText);
+// additems.style.color = "green"
+// //additems.style.fontWeight = 'bold';
+// additems.innerHTML = '<b> Add items </b>';
+
+// getelementsby class name//
+var items = document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[1]);
+// items[1].textcontent = 'Hello 2';
+// items[1].style.fontweight = 'bold';
+items[2].style.backgroundColor = 'green';
+
+// to change styles of all items
+
+for(let i=0; i<items.length; i++){
+    items[i].style.fontWeight = 'bold';
+}
