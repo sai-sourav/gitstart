@@ -52,16 +52,55 @@
 // for(let i=0; i<items.length; i++){
 //     items[i].style.fontWeight = 'bold';
 // }
+
 // get element by tagname//
-var li = document.getElementsByTagName('li');
-// console.log(li);
-// console.log(li[1]);
-// li[1].textcontent = 'Hello 2';
-li[1].style.fontWeight = 'bold';
-li[2].style.backgroundColor = 'green';
+// var li = document.getElementsByTagName('li');
+// // console.log(li);
+// // console.log(li[1]);
+// // li[1].textcontent = 'Hello 2';
+// li[1].style.fontWeight = 'bold';
+// li[2].style.backgroundColor = 'green';
 
-// to change styles of all items
+// // to change styles of all items
 
-for(let i=0; i<li.length; i++){
-    li[i].style.fontWeight = 'bold';
+// for(let i=0; i<li.length; i++){
+//     li[i].style.fontWeight = 'bold';
+// }
+
+// QUERYSELECTOR //
+// var header = documrnt.querySelector('#main-header'); //using id
+// header.style.borderBottom = 'solid 4px #ccc';
+
+// var input = document.querySelector('input'); //first input field
+// input.value = 'Hello world'
+
+// var submit = document.querySelector('input[type="submit"]'); //first input field type submit
+// submit.value = "SEND"
+
+// var item = document.querySelector(".list-group-item");
+// item.style.color = 'red';
+
+// var lastitem = document.querySelector(".list-group-item:last-child");
+// lastitem.style.color = 'blue';
+
+// var seconditem = document.querySelector(".list-group-item:nth-child(2)");
+// seconditem.style.backgroundColor = 'green'
+
+// or
+
+// var item = document.querySelector('#items');
+// item.children[1].style.backgroundColor = 'green'
+
+// item.children[2].style.display = 'none'
+
+// queryselector all //
+
+var items = document.querySelectorAll('.list-group-item');
+items[1].style.color = 'green';
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for(let i=0; i<odd.length; i++){
+    odd[i].style.backgroundColor = 'green';
 }
+
+// query selector brings single item while queryselector all brings multiple items //
