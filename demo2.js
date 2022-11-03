@@ -19,13 +19,13 @@
 //GET ELEMENT ID
 
 // console.log(document.getElementById('header-title'));
-var headerTitle = document.getElementById('header-title')
-// console.log(headerTitle);
+// var headerTitle = document.getElementById('header-title')
+// // console.log(headerTitle);
 
-// headerTitle.textContent = 'Hello';
-// headerTitle.innerText = 'Goodbye';
-console.log(headerTitle.innerText)
-console.log(headerTitle.textContent)
+// // headerTitle.textContent = 'Hello';
+// // headerTitle.innerText = 'Goodbye';
+// console.log(headerTitle.innerText)
+// console.log(headerTitle.textContent)
 //headerTitle.innerHTML = '<h3>Hello</h3>';
 
 // text content will show everithing including text display set to none
@@ -40,15 +40,28 @@ console.log(headerTitle.textContent)
 // additems.innerHTML = '<b> Add items </b>';
 
 // getelementsby class name//
-var items = document.getElementsByClassName('list-group-item');
-// console.log(items);
-// console.log(items[1]);
-// items[1].textcontent = 'Hello 2';
-// items[1].style.fontweight = 'bold';
-items[2].style.backgroundColor = 'green';
+// var items = document.getElementsByClassName('list-group-item');
+// // console.log(items);
+// // console.log(items[1]);
+// // items[1].textcontent = 'Hello 2';
+// // items[1].style.fontweight = 'bold';
+// items[2].style.backgroundColor = 'green';
+
+// // to change styles of all items
+
+// for(let i=0; i<items.length; i++){
+//     items[i].style.fontWeight = 'bold';
+// }
+// get element by tagname//
+var li = document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textcontent = 'Hello 2';
+li[1].style.fontWeight = 'bold';
+li[2].style.backgroundColor = 'green';
 
 // to change styles of all items
 
-for(let i=0; i<items.length; i++){
-    items[i].style.fontWeight = 'bold';
+for(let i=0; i<li.length; i++){
+    li[i].style.fontWeight = 'bold';
 }
