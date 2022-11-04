@@ -95,12 +95,99 @@
 
 // queryselector all //
 
-var items = document.querySelectorAll('.list-group-item');
-items[1].style.color = 'green';
+// var items = document.querySelectorAll('.list-group-item');
+// items[1].style.color = 'green';
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for(let i=0; i<odd.length; i++){
-    odd[i].style.backgroundColor = 'green';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for(let i=0; i<odd.length; i++){
+//     odd[i].style.backgroundColor = 'green';
+// }
 
 // query selector brings single item while queryselector all brings multiple items //
+
+// Traversing the DOM //
+// var itemlist = document.querySelector("#items");
+// parent node
+// console.log(itemlist.parentNode);
+// itemlist.parentNode.style.backgroundColor = "yellow";
+// console.log(itemlist.parentNode.parentNode.parentNode);
+
+// parent element
+// console.log(itemlist.parentElement);
+// itemlist.parentElement.style.backgroundColor = "yellow";
+// console.log(itemlist.parentElement.parentElement.parentElement);
+
+// childNodes
+// console.log(itemList.childNodes);
+
+// console.log(itemlist.children);
+// console.log(itemlist.children[1]);
+
+// //firstChild
+// console.log(itemList.firstchild); // brings line breaks also
+
+// //first element child
+// console.log(itemlist.firstElementChild);
+
+// //lastChild
+// console.log(itemList.lastchild); // brings line breaks also
+
+// //last element child
+// console.log(itemlist.lastElementChild);
+
+// // nextSibling
+// console.log(itemlist.nextSibling); // brings line breaks also
+
+// // nextElementSibling
+// console.log(itemlist.nextElementSibling);
+
+
+// // previousSibling
+// console.log(itemList.previousSibling);
+// // previousElementSibling
+// console.log(itemList.previousElementSibling);
+
+
+// createElement
+
+
+// create a div
+var newDiv = document.createElement('div');
+
+// add class
+newDiv.classname = 'hello'
+
+// add id
+newDiv.id = 'hello1'
+
+// add attr
+newDiv.setAttribute('title', 'hello Div');
+
+// create text node
+var newDivText = document.createTextNode('Hello world');
+
+// add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+// console.log(newDiv);
+
+newDiv.style.fontsize = '30px';
+
+container.insertBefore(newDiv, h1);
+
+
+
+var newDiv1 = document.createElement('div');
+
+newDiv1.innerHTML = newDiv.innerHTML
+
+// console.log(newDiv1)
+
+var items = document.querySelector('.list-group');
+
+var i1 = document.querySelector('li');
+
+items.insertBefore(newDiv1, i1);
