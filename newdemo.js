@@ -9,6 +9,53 @@ itemList.addEventListener('click', removeItem);
 // Filter event
 filter.addEventListener('keyup', filterItems);
 
+// get items from local storage into array
+ Object.keys(localStorage).forEach((key)=>{
+    var user_serialized = localStorage.getItem(key);
+    var user_deserialized = JSON.parse(user_serialized);
+
+    var li = document.createElement('li');
+    // Add class
+    li.className = 'list-group-item';
+    // Add text node with input value
+    li.appendChild(document.createTextNode(user_deserialized.name + " " + user_deserialized.desc));
+    ///
+  
+    // Create del button element
+    var deleteBtn = document.createElement('button');
+  
+    // Add classes to del button
+    deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  
+    // Append text node
+    deleteBtn.appendChild(document.createTextNode('X'));
+  
+    // Append button to li
+    li.appendChild(deleteBtn);
+    
+    ///
+  
+    // create edit button element
+    var editBtn = document.createElement('button');
+  
+    // Add classes to edit button
+    editBtn.className = 'btn btn-default btn-sm float-right edit';
+  
+     // Append text node
+     editBtn.appendChild(document.createTextNode('+'));
+  
+     // Append button to li
+    li.appendChild(editBtn);
+  
+  
+    ///
+  
+    // Append li to list
+    itemList.appendChild(li);
+    
+ });
+
+
 
 // Add item
 function addItem(e){
@@ -26,16 +73,14 @@ function addItem(e){
       desc : newItem1
     }
     let myobj_serialized = JSON.stringify(myobj);
-    localStorage.setItem("item",myobj_serialized);
-    
+    localStorage.setItem("user"+myobj.name,myobj_serialized);
+
   // Create new li element
   var li = document.createElement('li');
   // Add class
   li.className = 'list-group-item';
   // Add text node with input value
-  li.appendChild(document.createTextNode(newItem));
-  li.appendChild(document.createTextNode(' '));
-  li.appendChild(document.createTextNode(newItem1));
+  li.appendChild(document.createTextNode(newItem + " " + newItem1));
   ///
 
   // Create del button element
