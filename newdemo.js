@@ -18,7 +18,16 @@ function addItem(e){
   var newItem = document.getElementById('item').value;
   var newItem1 = document.getElementById('item2').value;
   // adding details to local storage
-  localStorage.setItem(newItem,newItem1);
+  //localStorage.setItem(newItem,newItem1);
+
+  // adding details as object to local storage
+    let myobj = {
+      name : newItem ,
+      desc : newItem1
+    }
+    let myobj_serialized = JSON.stringify(myobj);
+    localStorage.setItem("item",myobj_serialized);
+    
   // Create new li element
   var li = document.createElement('li');
   // Add class
